@@ -1,0 +1,7 @@
+spring:
+  redis:
+    database: 0
+    port: 6379
+logging:
+  level:
+    org.springframework: DEBUG
