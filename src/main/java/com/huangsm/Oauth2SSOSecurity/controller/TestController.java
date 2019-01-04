@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.annotation.Resources;
+import java.security.Principal;
 
 /**
  * 测试接口
@@ -40,5 +41,8 @@ public class TestController {
         System.out.println(authentication.getDetails());
         return "order id"+authentication.getPrincipal();
     }
-
+    @GetMapping("/user")
+    public Principal user(Principal user){
+        return user;
+    }
 }
